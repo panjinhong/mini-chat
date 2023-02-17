@@ -1,0 +1,11 @@
+:root {
+  --background-color: #efa56d;
+  --main-background-color: #fff;
+  --border-color: #eee;
+  --title-color: #000;
+  --icon-color: #efa56d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {}
+}
