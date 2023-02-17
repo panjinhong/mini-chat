@@ -9,9 +9,10 @@ export function useTheme() {
   const setCurrentTheme = (theme?: Theme) => {
     if (theme) {
       currentTheme.value = theme;
-      return;
+    } else {
+      currentTheme.value = currentTheme.value === "light" ? "dark" : "light";
     }
-    currentTheme.value = currentTheme.value === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("theme", currentTheme.value);
   };
 
   return [currentTheme, setCurrentTheme] as [
